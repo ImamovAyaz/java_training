@@ -1,0 +1,152 @@
+Семейство Алгоритмов!!!
+
+Ветвления:
+1)
+	if then else
+	if else
+2)
+	switch (тип кофе)
+	{
+		растовримый: {одни действие (-я)}
+		молотый: {другие действия}
+		зерновой: {третьи действия}
+	}
+
+Повторения действий:
+1) 
+	for (например: 1 - 10)
+2)
+	foreach (например: kid from group)
+3)
+	do{} while {}
+
+Логические операции:
+1)
+	отрицание (not)
+2)
+	операция И (&&)
+3)
+	операция ИЛИ (||)
+____________________________________________________________________________________________
+Доп инфа из Урока №2:
+
+class DrinkEngine
+{
+	public method Coffee makeCoffee();
+	public method Tea makeTea();
+	public method Water hotWater();
+	public method Water coldWater();
+}
+
+class Coffee
+{
+	public method Energy getEnergy();
+}	
+
+class Tea
+{
+	public method Energy getEnergy();
+}
+
+class Water
+{
+	temperature waterTemperature;
+}
+
+class Employee
+{
+	private Energy energyLevel;
+	public method drinkCoffee(Coffee coffee)
+	{
+		energyLevel += coffee.getEnergy();
+	}
+}
+
+DrinkEngine drinkEngineF1;
+DrinkEngine drinkEngineF2;
+DrinkEngine drinkEngineF3;
+DrinkEngine drinkEngineF4;
+DrinkEngine drinkEngineF5;
+
+Employee AntonSemenchenko;
+
+Coffee myMorningCoffee = drinkEngineF3.makeCoffee();
+AntonSemenchenko.drinkCoffee(myMorningCoffee);
+
+class coffee DrinkEngine::makeCoffee()
+{
+	//1) Отфильтровать воду;
+	WaterFilter filter;
+	Water filteredWater = filter.filterOut;
+
+	//2) Набрать в чайник фильтрованной воды;
+	Boiler boiler;
+	boiler.addWater(filteredWater);
+
+	//3) Включить чайник;
+	boiler.switchOn();
+	
+	//4) Взять чашку для кофе;
+	Cup coffeeCup;
+	
+	//5) Подготовить кофе;
+	CoffeeMixer coffeeMixer;
+	coffeeMixer.mixIt();
+
+	//6) Насыпать кофе в чашку;
+	coffeeCup.addCoffee(coffeeMixer.getCoffee());
+	
+	//7) Залить кофе горячей водой;	
+	coffeeCup.addWater(boiler.getWater);
+
+	//8) Отфильтровать кофе;
+	CoffeeFilter coffeeFilter(coffeeCup.getCoffee());
+	coffeeFilter.filterIt();
+		//public filterIt();
+		//privet method
+		//prepareFilter();
+		//useFilter();
+		//useFilter();
+		//useFilter();
+		//cleanUpFilter();
+
+	//9) Наливаем кофе в чистую чашку;
+	Cup cleancoffeeCup(coffeeFilter.getCoffee());
+}
+____________________________________________________________________________________________
+
+Algorithm: Заварить кофе
+1) Отфильтровать воду;
+2) Набрать в чайник фильтрованной воды;
+3) Включить чайник;
+Definition of Ready (DoR) - Условия выполнения: В чайнике должно быть ЧИСТАЯ вода (чайник, электр-во)
+Definition of Done (DoD) - Условия готовности: Чайник закипел, остыл до 97 градусов
+4) Взять чашку для кофе;
+5) Подготовить кофе;
+if (кофе == растворивый)
+{
+	ничего не делаем
+}
+else if (кофе == молотый)
+{
+	ничего не делаем
+}
+else if (кофе == зерновой)
+{
+	переламываем зерновой кофе в кофемолке
+}
+
+6) Насыпать кофе в чашку;
+7) Залить кофе горячей водой;
+8) Отфильтровать кофе;
+if (кофе == растворивый)
+{
+	ничего не делаем
+}
+else if (кофе == молотый || кофе == зерновой)
+{
+	фильтруем через ситечко
+}
+
+9) Наливаем кофев чистую чашку;
+Result: Чашка кофе 

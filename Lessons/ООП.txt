@@ -1,0 +1,82 @@
+Задача \ Алгоритм (как решение)
+Имеются шаги:
+1) -> подЗадача \ подАлгоритм \ подПрограмма
+	1)
+	2)
+	...
+	6)
+2)  
+...
+25)
+Необходимо проектировать сверху вниз, разбивать задачу на подзадачи.
+
+
+sin2x + cos2x = 1;
+процедура sinx => from standert Math Library
+процедура  cosx => from standert Math Library
+возведение в квадрат **2 => from Programming Language (example - Python or Java Math.pow())
++ => from Programming Language
+== => from Programming Language
+
+______________________________________________________________________________________________
+ООП - Объекто Ориентированное Программирование - 
+
+Base Class - Продукт питания
+Class - Продукт питания из России, Продукт питания из Швеции, Продукт питания из Бразилии
+	Class -> Продукт питания из Европейская часть России, Восточная часть России
+	Class -> Продукт питания из Южно-Европейская часть России, Северно-Европейская часть России
+	...
+
+Object - (конкретный продукт питания) - the Пирожок ... 
+
+______________________________________________________________________________________________
+// Перпись населения
+Base Class - Human
+	Sub Class - Man (preWarrior Warrior Pensioner) //Warrior  - призывники
+		Методы:
+			Warrior.getMilitaryStatus () // военный билет
+	Sub Class - Woman (preMotherhood Motherhood Pensioner) //Motherhood - материнство
+		Методы:
+			Motherhood.getPregnancyStatus() // статус беременности
+______________________________________________________________________________________________
+// Документооборот в медицине
+Base Class - Patient //Пациент
+	Sub Class - Man
+		Методы:
+			Man.getBadHabbits() // вредные привычки
+	Sub Class - Woman
+		Методы:
+			Motherhood.getPregnancyStatus() // статус беременности
+______________________________________________________________________________________________
+//Документооброт в офисе
+Base Class - Document
+	data name
+	data path
+
+	data CreatorDate
+	data LasrModificationDate
+
+	Creator creator
+	Owner owner
+		Методы:
+			create()
+			open()
+			delete()
+			read()
+			write()
+	sub class - Doc, Table, PDF, AUDIO, VIDEO, EMAIL, Message - примеры видов документов
+	Internal - внутренние
+	External - внешние
+	Priority: Low, Standart, High, Critical //Серьёзность и приоритет документа
+	Creator, Owner, Contributor, Observer, 
+	class Approver (sub class - Signer //подписыватель)
+		Методы:
+			approve
+		Approver object - Director, CTO
+
+		sub class - Signer
+			Методы:
+				sign()
+
+Doc object financeSummary.create(Director);
+______________________________________________________________________________________________
