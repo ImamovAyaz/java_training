@@ -18,9 +18,87 @@
     8. Нанести средство для мытья посуды на губку;
     9. Слегка сполоснуть;
     10. Запенить губку;
-    11. Помыть чашку вокруг с помощью губки;
-    12. Помыть чашку внутри с помощью губки;
-    13. Сполоснуть чашку в воде;
-    14. Положить чашку для высыхания;
+    11. Помыть чашку с помощью губки;
+    12. Сполоснуть чашку в воде;
+    13. Положить чашку для высыхания;
     Result: Чашка помыта;
 _______________________________________________________________________________________________________________________  
+class Cup
+{
+	  private String Condition;
+    public static void Take();
+    public static void Wash();
+    public static void Put();
+}
+class Water
+{
+    private String Hot;
+    private String Cold;
+  	private String Temperature;
+    public static void Open(Water Hot)
+    {
+        this.Hot = Hot;
+    }
+    public static void Open(Water Cold)
+    {
+        this.Cold = Cold;
+    }
+    public static void Close();
+    public static void On(Hot hot, Cold cold)
+    {
+        do
+          {
+              Open(hot);
+              Open(cold)
+          }
+        while (Temperatur == 40 || Temperature == 50);
+    }
+}
+class Dish //средство для мытья посуды
+{
+  	public static void getSoap();
+    public static void Take();
+}
+class Sponge //губка
+{
+	  private String Condition;
+    public static void Take();
+    public static void AddWater();
+  	public static void setSoap(Dish dish)
+    {
+        if (Condition == "Мокрая")
+        {
+          this.Condition += dish;
+        }
+        else
+        {
+          AddWater();
+        };
+    }
+}
+
+public class DishCupTest()
+{
+    //1. Зайти на кухню;
+    Driver Home = new Driver Home.GoKitchen();
+    //2. Взять грязную чашку
+    Cup.Take();
+    //3. Включить кран;
+    //4. Отрегулировать температуру воды до t>=50 градусов;
+    Water.On(Hot, Cold);
+    //5. Взять губку для мытья посуду в левую руку;
+    Sponge.Take();
+    //6. Взять средство для мытья посуду в правую руку;
+    Dish.Take();
+    //7. Сполоснуть губку в воде;
+    //8. Нанести средство для мытья посуды на губку;
+    //9. Слегка сполоснуть;
+    //10. Запенить губку;
+    Sponge.setSoap(Dish);
+    //11. Помыть чашку с помощью губки;
+    //12. Сполоснуть чашку в воде;
+    Cup.Wash();
+    //13. Положить чашку для высыхания;
+    Cup.Take();
+    Allert(Cup, Clear);
+}
